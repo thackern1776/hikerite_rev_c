@@ -6,11 +6,6 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const hikers = sequelizeClient.define('hikers', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false
-    },
     username: {
       type: DataTypes.STRING(15),
       allowNull: false

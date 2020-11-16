@@ -6,11 +6,6 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const trails = sequelizeClient.define('trails', {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false
-    },
     trail_name: {
       type: DataTypes.STRING(25),
       allowNull: false
